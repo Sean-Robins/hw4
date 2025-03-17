@@ -46,11 +46,13 @@
       </div>
     </nav>
 
-    <div>
-      <%= flash["notice"] %>
-    </div>
-   
     <div class="container mt-3">
+      <% if flash["notice"] != nil %>
+        <div class="alert alert-secondary">
+          <%= flash["notice"] %>
+        </div>
+    <% end %>
+
       <%= yield %>
     </div>
     
