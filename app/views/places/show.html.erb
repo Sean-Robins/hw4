@@ -2,7 +2,7 @@
 
 <div class="row"> 
 
-  <% if User.find_by({ "id" => session["user_id"] }) != nil %>
+  
 
     <h2>My Entries</h2>
     <% for entry in @entries %>
@@ -21,8 +21,8 @@
         <a href="/places">Back to All Places</a>
       </p>
     
-  <% else %>
+  
     You must first <a href="/login">login</a> to view the entries for <%= @place["name"] %>.
-  <% end %>
+  
 
 </div>
